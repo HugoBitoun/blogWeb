@@ -22,4 +22,11 @@ class HomeController
     public function homepage(){
         return new Response("First page !");
     }
+
+    /**
+     * @Route("/article/{nameArticle}")
+     */
+    public function readArticle($nameArticle){
+        return new Response("L'article ".$nameArticle." arrive !");
+    }
 }
