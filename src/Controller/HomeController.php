@@ -9,24 +9,21 @@
 namespace App\Controller;
 
 
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 
-class HomeController
+class HomeController extends AbstractController
 {
 
     /**
      * @Route("/")
      */
     public function homepage(){
-        return new Response("First page !");
+        return $this->render("base.html.twig") ;
     }
 
-    /**
-     * @Route("/article/{nameArticle}")
-     */
-    public function readArticle($nameArticle){
-        return new Response("L'article ".$nameArticle." arrive !");
-    }
+
+
+
 }
